@@ -1,0 +1,77 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isMember() {
+      return isAuthenticated();
+    }
+
+    // Public readable collections
+    match /announcements/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /events/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /gallery/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /priests/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /ministries/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /massTimings/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /downloads/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /contactMessages/{document} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Protected collections - authenticated members for details, public for count
+    match /families/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /members/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // User profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      allow write: if isAdmin();
+    }
+  }
+}
