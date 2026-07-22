@@ -1,5 +1,5 @@
 import { useCollection } from '../../hooks/useFirestore';
-import { FiUsers, FiBell, FiCalendar, FiImage } from 'react-icons/fi';
+import { FiUsers, FiBell, FiCalendar, FiImage, FiDownload } from 'react-icons/fi';
 
 export default function AdminDashboard() {
   const { documents: families } = useCollection('families');
@@ -7,6 +7,9 @@ export default function AdminDashboard() {
   const { documents: announcements } = useCollection('announcements');
   const { documents: events } = useCollection('events');
   const { documents: gallery } = useCollection('gallery');
+  const { documents: priests } = useCollection('priests');
+  const { documents: ministries } = useCollection('ministries');
+  const { documents: massTimings } = useCollection('massTimings');
 
   const stats = [
     { label: 'Families', value: families.length, icon: FiUsers, color: 'bg-blue-50 text-blue-600' },
@@ -16,9 +19,43 @@ export default function AdminDashboard() {
     { label: 'Gallery Images', value: gallery.length, icon: FiImage, color: 'bg-pink-50 text-pink-600' },
   ];
 
+  const handleBackup = () => {
+    const backupData = {
+      exportDate: new Date().toISOString(),
+      families,
+      members,
+      announcements,
+      events,
+      priests,
+      ministries,
+      massTimings,
+    };
+
+    const jsonString = JSON.stringify(backupData, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `parish-backup-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div>
-      <h1 className="text-2xl font-bold text-primary-500 mb-6">Dashboard</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-bold text-primary-500">Dashboard</h1>
+        <button
+          onClick={handleBackup}
+          className="flex items-center gap-2 bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-100 transition-colors"
+        >
+          <FiDownload size={16} />
+          Backup Data
+        </button>
+      </div>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">
