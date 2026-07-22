@@ -127,7 +127,13 @@ export default function Directory() {
   }, [members, selectedFamily]);
 
   return (
-    <div>
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10 opacity-20"
+        style={{ backgroundImage: "url('/directory-bg.jpg')" }}
+      />
+
       <PageBanner
         title="Parish Directory"
         subtitle="Family directory for registered parish members"
@@ -240,31 +246,48 @@ export default function Directory() {
               </div>
             ) : (
               /* Family List View */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredFamilies.map((family) => (
-                  <div
-                    key={family.id}
-                    onClick={() => setSelectedFamily(family)}
-                    className="card p-5 cursor-pointer hover:border-primary-300 border border-transparent transition-colors"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-sm font-bold text-primary-500">
-                          {family.familyNo || '-'}
-                        </span>
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="font-bold text-primary-500 truncate">
-                          {family.familyName}
-                        </h3>
-                        <p className="text-sm text-gray-500">
-                          {family.houseName && `${family.houseName} • `}
-                          {family.ward ? `Ward ${family.ward}` : ''}
-                        </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {filteredFamilies.map((family) => {
+                  const head = members.find((m) => m.familyId === family.id && m.relationship === 'Head');
+                  return (
+                    <div
+                      key={family.id}
+                      onClick={() => setSelectedFamily(family)}
+                      className="relative cursor-pointer rounded-2xl p-5 border-2 border-primary-200 hover:border-gold-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden group"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.7)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                      }}
+                    >
+                      {/* Top accent line */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-gold-400 to-primary-500 opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                          <span className="text-sm font-bold text-white">
+                            {family.familyNo || '-'}
+                          </span>
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-primary-600 truncate text-[15px]">
+                            {family.familyName}
+                          </h3>
+                          {head && (
+                            <p className="text-sm text-gray-600 mt-0.5 truncate">
+                              {head.name}
+                            </p>
+                          )}
+                          {family.ward && (
+                            <span className="inline-block mt-2 text-xs font-semibold text-primary-500 bg-primary-50 px-2.5 py-0.5 rounded-full">
+                              Ward {family.ward}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
 

@@ -115,7 +115,7 @@ export default function Header() {
                 )}
                 <Link
                   to="/directory"
-                  className="text-[12px] font-semibold text-primary-600 hover:bg-primary-50 px-3.5 py-2 rounded-xl transition-all"
+                  className="text-[12px] font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 px-3.5 py-2 rounded-xl transition-all border border-primary-100"
                 >
                   Directory
                 </Link>

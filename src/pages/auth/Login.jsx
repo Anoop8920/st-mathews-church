@@ -25,7 +25,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center pt-28 pb-16 px-4">
+    <div className="min-h-screen flex items-center justify-center pt-28 pb-16 px-4 relative">
+      {/* Background Image */}
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10 opacity-20"
+        style={{ backgroundImage: "url('/directory-bg.jpg')" }}
+      />
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-10">

@@ -34,18 +34,6 @@ export default function ManageFamilies() {
     try {
       setSubmitError('');
 
-      // Check for duplicate family name
-      const duplicate = documents.find(
-        (f) =>
-          f.familyName.toLowerCase().trim() === data.familyName.toLowerCase().trim() &&
-          f.id !== editingItem?.id
-      );
-
-      if (duplicate) {
-        setSubmitError(`A family with the name "${data.familyName}" already exists (Family No: ${duplicate.familyNo}).`);
-        return;
-      }
-
       if (editingItem) {
         await updateDocument('families', editingItem.id, data);
       } else {
@@ -263,7 +251,7 @@ export default function ManageFamilies() {
                 <span className="text-sm font-bold text-primary-600">{item.familyNo || '-'}</span>
               </div>
               <div>
-                <h4 className="font-medium text-gray-800">{item.familyName}</h4>
+                <h4 className="font-medium text-gray-800">{item.familyNo}. {item.familyName}</h4>
                 <p className="text-sm text-gray-500">
                   {item.houseName && `${item.houseName} • `}
                   {item.ward && `Ward ${item.ward}`}

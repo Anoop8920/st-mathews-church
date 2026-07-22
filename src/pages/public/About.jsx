@@ -15,29 +15,66 @@ export default function About() {
           title="ഇടവക ചരിത്രം"
           subtitle="Parish History"
         />
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-card p-8 md:p-10 border border-gray-100/50">
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              സുവിശേഷകനും അപ്പസ്‌തോലനുമായ വി.മത്തായി ശ്ലീഹായുടെ നാമത്തില്‍ കോട്ടയം അതിരൂപതയിലുള്ള ഏക ദൈവാലയമാണ്‌ വാകത്താനം സെന്റ്‌ മാത്യൂസ്‌ ക്‌നാനായ കത്തോലിക്കാപള്ളി. 1910 സെപ്‌റ്റംബര്‍ 21-ാം തീയതി വി. മത്തായി ശ്ലീഹായുടെ തിരുനാള്‍ ദിനത്തില്‍ ദൈവദാസനായ മാര്‍ മാത്യു മാക്കീല്‍ പിതാവ്‌ ഈ ദൈവാലയം കൂദാശ ചെയ്‌തു.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              ഇടയ്‌ക്കാട്ടുപള്ളിയിലും തുടര്‍ന്ന്‌ പാച്ചിറപള്ളിയിലും അംഗങ്ങളായിരുന്ന 15 ഓളം കുടുംബങ്ങളാണ്‌ വാകത്താനത്തെ ആദ്യ ഇടവകാംഗങ്ങള്‍. പാച്ചിറപള്ളി വികാര്‍ ഇന്‍ചാര്‍ജായിരുന്ന മാത്യു വട്ടക്കളത്തില്‍ അച്ചനാണ്‌ ഈ ദൈവാലയത്തിന്റെ പ്രഥമ വികാരി.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              1910-ല്‍ ഒരു ഓലമേഞ്ഞ ഷെഡില്‍ തുടങ്ങിയ ദൈവാലയം 1916-ല്‍ മാത്യു വട്ടക്കളത്തിലച്ചന്റെ നേത്യത്വത്തില്‍ പുതുക്കിപ്പണിയാന്‍ ആരംഭിച്ചു. എന്നാല്‍ വട്ടക്കളത്തിലച്ചന്റെ അകാല നിര്യാണത്തെ തുടര്‍ന്ന്‌ 1917-ല്‍ ചാക്കോ ഒട്ടക്കാട്ടില്‍ അച്ചന്റെ നേത്യത്വത്തില്‍ പണികള്‍ പൂര്‍ത്തീകരിച്ചു.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              എന്നാല്‍ വാകത്താനത്തെ ആളുകളുടെ ആത്മീയ ആവശ്യങ്ങള്‍ക്ക്‌ ഈ ദൈവാലയം പോരായ്‌കയാണെന്ന്‌ തോന്നുകയാലും സ്വന്തമായി ദൈവാലയം നിര്‍മ്മിക്കുവാനുള്ള സാമ്പത്തികവും ഭൗതികവുമായ സാഹചര്യം ഇവിടുത്തെ പാവപ്പെട്ട ഇടവകാംഗങ്ങള്‍ക്ക്‌ ഇല്ലായ്‌കയാലും അഭിവന്ദ്യ ചൂളപ്പറമ്പില്‍ പിതാവിന്റെ പ്രത്യേക താത്‌പര്യത്താല്‍ 1921-1922 വര്‍ഷത്തില്‍ ദൈവാലയം വീണ്ടും വിപുലീകരിച്ച്‌ നിര്‍മ്മിച്ചു. ഈ ദൈവാലയത്തില്‍ 68 വര്‍ഷത്തോളം ആത്മീയ ശുശ്രൂഷകള്‍ നടത്തി.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              ദൈവാലയത്തിന്റെ ജീര്‍ണ്ണതയും സ്ഥലപരിമിതിയും മൂലം പുതിയ ദൈവാലയം നിര്‍മ്മിക്കാന്‍ തീരുമാനിച്ചു. വികാരി ഫാ. മാത്യു ഇളപ്പാനിക്കലിന്റെ നേത്യത്വത്തില്‍ പുതിയ ദൈവാലയം നിര്‍മ്മിച്ച്‌ 1989 ഓഗസ്‌റ്‌റ്‌ 15-ാം തീയതി അഭിവന്ദ്യ മാര്‍ കുര്യാക്കോസ്‌ കുന്നശ്ശേരി പിതാവ്‌ കൂദാശ ചെയ്‌ത്‌ ദൈവത്തിന്‌ പ്രതിഷ്‌ഠിച്ചു.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              ഇപ്പോള്‍ ഈ ഇടവകയില്‍ 157 കുടുംബങ്ങളും 709 അംഗങ്ങളുമുണ്ട്‌. 2009-2010 വര്‍ഷത്തില്‍ ദൈവാലയത്തിന്റെ ശതാബ്‌ദി ആഘോഷിച്ചു. ശതാബ്‌ദി സ്‌മാരകമായി, പ്രഥമ വികാരിയായിരുന്ന ഫാ. മാത്യു വട്ടക്കളത്തിന്റെ പേരില്‍ ഒരു മതബോധനഹാള്‍ നിര്‍മ്മിക്കുകയും 2010 ഡിസംബര്‍ 30-ാം അഭി. മാത്യു മൂലക്കാട്ട്‌ മെത്രാപ്പോലീത്ത വെഞ്ചരിക്കുകയും ചെയ്‌തു.
-            </p>
-            <p className="text-gray-700 leading-[2] text-base md:text-lg" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
-              സെപ്‌റ്റംബര്‍ 21-ാം തീയതി വി. മത്തായി ശ്ലീഹായുടെ തിരുനാള്‍ കഴിഞ്ഞുവരുന്ന ഞായറാഴ്‌ച, ഈ ദൈവാലയത്തിന്റെ സ്ഥാപനത്തിരുനാളായും ജനുവരി 20 നു ശേഷം വരുന്ന ഞായറാഴ്‌ച പ്രധാനതിരുനാളായും (വി.സെബസ്‌ത്യാനോസ്‌) ആചരിക്കുന്നു.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-start gap-8">
+            {/* Left Image */}
+            <div className="hidden lg:flex flex-col items-center flex-shrink-0 sticky top-28">
+              <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-gold-300 shadow-lg">
+                <img
+                  src="/patron-saint.jpg"
+                  alt="Patron Saint"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1">
+              <div className="bg-white rounded-2xl shadow-card p-8 md:p-10 border border-gray-100/50">
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  സുവിശേഷകനും അപ്പസ്‌തോലനുമായ വി.മത്തായി ശ്ലീഹായുടെ നാമത്തില്‍ കോട്ടയം അതിരൂപതയിലുള്ള ഏക ദൈവാലയമാണ്‌ വാകത്താനം സെന്റ്‌ മാത്യൂസ്‌ ക്‌നാനായ കത്തോലിക്കാപള്ളി. 1910 സെപ്‌റ്റംബര്‍ 21-ാം തീയതി വി. മത്തായി ശ്ലീഹായുടെ തിരുനാള്‍ ദിനത്തില്‍ ദൈവദാസനായ മാര്‍ മാത്യു മാക്കീല്‍ പിതാവ്‌ ഈ ദൈവാലയം കൂദാശ ചെയ്‌തു.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  ഇടയ്‌ക്കാട്ടുപള്ളിയിലും തുടര്‍ന്ന്‌ പാച്ചിറപള്ളിയിലും അംഗങ്ങളായിരുന്ന 15 ഓളം കുടുംബങ്ങളാണ്‌ വാകത്താനത്തെ ആദ്യ ഇടവകാംഗങ്ങള്‍. പാച്ചിറപള്ളി വികാര്‍ ഇന്‍ചാര്‍ജായിരുന്ന മാത്യു വട്ടക്കളത്തില്‍ അച്ചനാണ്‌ ഈ ദൈവാലയത്തിന്റെ പ്രഥമ വികാരി.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  1910-ല്‍ ഒരു ഓലമേഞ്ഞ ഷെഡില്‍ തുടങ്ങിയ ദൈവാലയം 1916-ല്‍ മാത്യു വട്ടക്കളത്തിലച്ചന്റെ നേത്യത്വത്തില്‍ പുതുക്കിപ്പണിയാന്‍ ആരംഭിച്ചു. എന്നാല്‍ വട്ടക്കളത്തിലച്ചന്റെ അകാല നിര്യാണത്തെ തുടര്‍ന്ന്‌ 1917-ല്‍ ചാക്കോ ഒട്ടക്കാട്ടില്‍ അച്ചന്റെ നേത്യത്വത്തില്‍ പണികള്‍ പൂര്‍ത്തീകരിച്ചു.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  എന്നാല്‍ വാകത്താനത്തെ ആളുകളുടെ ആത്മീയ ആവശ്യങ്ങള്‍ക്ക്‌ ഈ ദൈവാലയം പോരായ്‌കയാണെന്ന്‌ തോന്നുകയാലും സ്വന്തമായി ദൈവാലയം നിര്‍മ്മിക്കുവാനുള്ള സാമ്പത്തികവും ഭൗതികവുമായ സാഹചര്യം ഇവിടുത്തെ പാവപ്പെട്ട ഇടവകാംഗങ്ങള്‍ക്ക്‌ ഇല്ലായ്‌കയാലും അഭിവന്ദ്യ ചൂളപ്പറമ്പില്‍ പിതാവിന്റെ പ്രത്യേക താത്‌പര്യത്താല്‍ 1921-1922 വര്‍ഷത്തില്‍ ദൈവാലയം വീണ്ടും വിപുലീകരിച്ച്‌ നിര്‍മ്മിച്ചു. ഈ ദൈവാലയത്തില്‍ 68 വര്‍ഷത്തോളം ആത്മീയ ശുശ്രൂഷകള്‍ നടത്തി.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  ദൈവാലയത്തിന്റെ ജീര്‍ണ്ണതയും സ്ഥലപരിമിതിയും മൂലം പുതിയ ദൈവാലയം നിര്‍മ്മിക്കാന്‍ തീരുമാനിച്ചു. വികാരി ഫാ. മാത്യു ഇളപ്പാനിക്കലിന്റെ നേത്യത്വത്തില്‍ പുതിയ ദൈവാലയം നിര്‍മ്മിച്ച്‌ 1989 ഓഗസ്‌റ്‌റ്‌ 15-ാം തീയതി അഭിവന്ദ്യ മാര്‍ കുര്യാക്കോസ്‌ കുന്നശ്ശേരി പിതാവ്‌ കൂദാശ ചെയ്‌ത്‌ ദൈവത്തിന്‌ പ്രതിഷ്‌ഠിച്ചു.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg mb-6" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  ഇപ്പോള്‍ ഈ ഇടവകയില്‍ 157 കുടുംബങ്ങളും 709 അംഗങ്ങളുമുണ്ട്‌. 2009-2010 വര്‍ഷത്തില്‍ ദൈവാലയത്തിന്റെ ശതാബ്‌ദി ആഘോഷിച്ചു. ശതാബ്‌ദി സ്‌മാരകമായി, പ്രഥമ വികാരിയായിരുന്ന ഫാ. മാത്യു വട്ടക്കളത്തിന്റെ പേരില്‍ ഒരു മതബോധനഹാള്‍ നിര്‍മ്മിക്കുകയും 2010 ഡിസംബര്‍ 30-ാം അഭി. മാത്യു മൂലക്കാട്ട്‌ മെത്രാപ്പോലീത്ത വെഞ്ചരിക്കുകയും ചെയ്‌തു.
+                </p>
+                <p className="text-gray-700 leading-[2] text-base md:text-lg" style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
+                  സെപ്‌റ്റംബര്‍ 21-ാം തീയതി വി. മത്തായി ശ്ലീഹായുടെ തിരുനാള്‍ കഴിഞ്ഞുവരുന്ന ഞായറാഴ്‌ച, ഈ ദൈവാലയത്തിന്റെ സ്ഥാപനത്തിരുനാളായും ജനുവരി 20 നു ശേഷം വരുന്ന ഞായറാഴ്‌ച പ്രധാനതിരുനാളായും (വി.സെബസ്‌ത്യാനോസ്‌) ആചരിക്കുന്നു.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="hidden lg:flex flex-col items-center flex-shrink-0 sticky top-28">
+              <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-gold-300 shadow-lg">
+                <img
+                  src="/church-altar.jpg"
+                  alt="Church Altar"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Show images in a row */}
+          <div className="flex lg:hidden justify-center gap-6 mt-8">
+            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-300 shadow-lg">
+              <img src="/patron-saint.jpg" alt="Patron Saint" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-300 shadow-lg">
+              <img src="/church-altar.jpg" alt="Church Altar" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </section>

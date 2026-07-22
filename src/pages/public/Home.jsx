@@ -41,8 +41,13 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-hero-pattern" />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/church-hero.jpg')" }}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/80 via-primary-900/60 to-primary-900/80" />
         
         {/* Animated decorative elements */}
         <div className="absolute top-1/4 right-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl animate-float" />

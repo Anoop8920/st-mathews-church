@@ -28,6 +28,15 @@ export default function ManageMembers() {
 
   const onSubmit = async (data) => {
     try {
+      // Validate: first member of a family must be "Head"
+      if (!editingItem) {
+        const familyMembers = members.filter((m) => m.familyId === data.familyId);
+        if (familyMembers.length === 0 && data.relationship !== 'Head') {
+          alert('The first member added to a family must have the relationship "Head".');
+          return;
+        }
+      }
+
       if (editingItem) {
         await updateDocument('members', editingItem.id, data);
       } else {
@@ -98,7 +107,7 @@ export default function ManageMembers() {
                 >
                   <option value="">Select Family</option>
                   {families.map((f) => (
-                    <option key={f.id} value={f.id}>{f.familyName}</option>
+                    <option key={f.id} value={f.id}>{f.familyNo}. {f.familyName}</option>
                   ))}
                 </select>
                 {errors.familyId && <p className="text-red-500 text-xs mt-1">{errors.familyId.message}</p>}
