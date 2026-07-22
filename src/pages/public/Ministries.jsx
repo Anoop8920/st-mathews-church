@@ -20,14 +20,14 @@ export default function Ministries() {
     },
     {
       id: '2',
-      name: 'CML (Catholic Men\'s League)',
+      name: 'KCC (Knanaya Catholic Congress)',
       description:
         'Men\'s organization focused on spiritual growth, parish service, and community building among male members of the parish.',
       icon: '👔',
     },
     {
       id: '3',
-      name: 'Mothers Forum',
+      name: 'KCWA (Knanaya Catholic Women\'s Association)',
       description:
         'Women\'s group dedicated to prayer, fellowship, and supporting families in their spiritual journey.',
       icon: '🌸',
