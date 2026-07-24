@@ -140,6 +140,37 @@ export default function Directory() {
       />
 
       <section className="container-section">
+        {/* Dashboard Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {(() => {
+            const now = new Date();
+            const seniorCount = members.filter((m) => {
+              if (!m.dateOfBirth) return false;
+              const age = Math.floor((now - new Date(m.dateOfBirth)) / (365.25 * 24 * 60 * 60 * 1000));
+              return age >= 60 && age < 80;
+            }).length;
+            const superSeniorCount = members.filter((m) => {
+              if (!m.dateOfBirth) return false;
+              const age = Math.floor((now - new Date(m.dateOfBirth)) / (365.25 * 24 * 60 * 60 * 1000));
+              return age >= 80;
+            }).length;
+
+            return [
+              { label: 'Families', value: families.length, border: 'border-blue-400', text: 'text-blue-600', bg: 'bg-blue-50' },
+              { label: 'Members', value: members.length, border: 'border-green-400', text: 'text-green-600', bg: 'bg-green-50' },
+              { label: 'Senior Citizens (60+)', value: seniorCount, border: 'border-amber-400', text: 'text-amber-600', bg: 'bg-amber-50' },
+              { label: 'Super Seniors (80+)', value: superSeniorCount, border: 'border-purple-400', text: 'text-purple-600', bg: 'bg-purple-50' },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className={`rounded-2xl p-5 text-center border-2 ${stat.border} ${stat.bg} shadow-md`}
+              >
+                <p className={`text-3xl font-heading font-bold ${stat.text}`}>{stat.value}</p>
+                <p className="text-xs text-gray-700 font-semibold mt-1">{stat.label}</p>
+              </div>
+            ));
+          })()}
+        </div>
         {/* Search Section */}
         <div className="max-w-4xl mx-auto mb-8">
           <div className="card p-6">

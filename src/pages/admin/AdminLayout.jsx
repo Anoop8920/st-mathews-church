@@ -15,7 +15,6 @@ import {
 
 const adminNav = [
   { to: '/admin', icon: FiHome, label: 'Dashboard', end: true },
-  { to: '/admin/announcements', icon: FiBell, label: 'Announcements' },
   { to: '/admin/events', icon: FiCalendar, label: 'Events' },
   { to: '/admin/gallery', icon: FiImage, label: 'Gallery' },
   { to: '/admin/families', icon: FiUsers, label: 'Families' },
