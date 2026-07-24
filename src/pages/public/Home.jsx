@@ -84,8 +84,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-8">
-              A parish community united in faith, love, and service — 
-              serving {familyCount} families since 1910.
+              A parish community united in faith, love, and service since 1910.
             </p>
 
             {/* CTA Buttons */}
