@@ -239,8 +239,8 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-hero-gradient py-20 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-cross-pattern" />
+      <section className="bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg width=%2240%22 height=%2240%22 viewBox=%220 0 40 40%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22%23fff%22%3E%3Cpath d=%22M19 0v20h2V0h-2zm0 20v20h2V20h-2zM0 19h20v2H0v-2zm20 0h20v2H20v-2z%22/%3E%3C/g%3E%3C/svg%3E')]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <SectionHeader
             title="Our Purpose"
@@ -248,28 +248,28 @@ export default function About() {
             light
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-gold-500/20 flex items-center justify-center mb-5">
-                <span className="text-gold-400 text-lg">🎯</span>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-gold-400/30 flex items-center justify-center mb-5">
+                <span className="text-gold-300 text-lg">🎯</span>
               </div>
-              <h3 className="text-xl font-heading font-bold text-gold-300 mb-4">
+              <h3 className="text-xl font-heading font-bold text-gold-200 mb-4">
                 Our Mission
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 To nurture and strengthen the faith of our parish community
                 through worship, catechesis, and service, while preserving the
                 rich heritage of the Knanaya Catholic tradition and fostering
                 unity among all families.
               </p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-gold-500/20 flex items-center justify-center mb-5">
-                <span className="text-gold-400 text-lg">👁️</span>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-gold-400/30 flex items-center justify-center mb-5">
+                <span className="text-gold-300 text-lg">👁️</span>
               </div>
-              <h3 className="text-xl font-heading font-bold text-gold-300 mb-4">
+              <h3 className="text-xl font-heading font-bold text-gold-200 mb-4">
                 Our Vision
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 To be a vibrant, faith-filled parish community that witnesses
                 the love of Christ through active participation in the
                 sacraments, charitable works, and building a strong bond of
