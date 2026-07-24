@@ -88,6 +88,13 @@ export default function AdminLayout() {
                 <span>{item.label}</span>
               </NavLink>
             ))}
+            <Link
+              to="/"
+              className="flex items-center space-x-1 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap text-red-500 bg-red-50"
+            >
+              <FiLogOut size={14} />
+              <span>Exit</span>
+            </Link>
           </div>
         </div>
 
