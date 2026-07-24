@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* Priests from St. Mathew's Church */}
-      <section className="container-section pt-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-8">
         <SectionHeader
           title="Priests from St. Mathew's Church"
           subtitle="Ordained priests from our parish community"
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Events */}
-      <section className="py-24 md:py-28">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Upcoming Events"

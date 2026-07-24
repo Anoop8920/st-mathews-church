@@ -234,7 +234,7 @@ Click **Save and Deploy**
 ### Step 3.4: Your Website URL
 
 After deployment, Cloudflare gives you a URL like:
-**`https://st-mathews-church.pages.dev`**
+**`Run `**
 
 This is your live website! Anyone with this link can visit it.
 
