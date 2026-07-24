@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, Link } from 'react-router-dom';
 import {
   FiHome,
   FiBell,
@@ -10,6 +10,7 @@ import {
   FiClock,
   FiDownload,
   FiSettings,
+  FiLogOut,
 } from 'react-icons/fi';
 
 const adminNav = [
@@ -20,6 +21,7 @@ const adminNav = [
   { to: '/admin/families', icon: FiUsers, label: 'Families' },
   { to: '/admin/members', icon: FiUser, label: 'Members' },
   { to: '/admin/priests', icon: FiUser, label: 'Priests' },
+  { to: '/admin/parish-priests', icon: FiUser, label: 'Parish Priests' },
   { to: '/admin/ministries', icon: FiBookOpen, label: 'Ministries' },
   { to: '/admin/mass-timings', icon: FiClock, label: 'Mass Timings' },
   { to: '/admin/downloads', icon: FiDownload, label: 'Downloads' },
@@ -56,6 +58,15 @@ export default function AdminLayout() {
               </NavLink>
             ))}
           </nav>
+          <div className="p-4 border-t">
+            <Link
+              to="/"
+              className="flex items-center space-x-3 px-4 py-2.5 rounded-lg text-sm font-medium text-red-500 hover:bg-red-50 transition-colors w-full"
+            >
+              <FiLogOut size={18} />
+              <span>Exit Admin</span>
+            </Link>
+          </div>
         </aside>
 
         {/* Mobile Top Nav */}

@@ -37,6 +37,11 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    match /parishPriests/{document} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
     match /ministries/{document} {
       allow read: if true;
       allow write: if isAdmin();

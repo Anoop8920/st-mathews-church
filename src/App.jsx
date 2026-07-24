@@ -9,6 +9,7 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import Home from './pages/public/Home';
 import About from './pages/public/About';
 import Priests from './pages/public/Priests';
+import ParishPriests from './pages/public/ParishPriests';
 import MassTimings from './pages/public/MassTimings';
 import Announcements from './pages/public/Announcements';
 import Events from './pages/public/Events';
@@ -31,6 +32,7 @@ import ManageGallery from './pages/admin/ManageGallery';
 import ManageFamilies from './pages/admin/ManageFamilies';
 import ManageMembers from './pages/admin/ManageMembers';
 import ManagePriests from './pages/admin/ManagePriests';
+import ManageParishPriests from './pages/admin/ManageParishPriests';
 import ManageMinistries from './pages/admin/ManageMinistries';
 import ManageMassTimings from './pages/admin/ManageMassTimings';
 import ManageDownloads from './pages/admin/ManageDownloads';
@@ -62,6 +64,14 @@ function App() {
             element={
               <Layout>
                 <Priests />
+              </Layout>
+            }
+          />
+          <Route
+            path="/parish-priests"
+            element={
+              <Layout>
+                <ParishPriests />
               </Layout>
             }
           />
@@ -152,6 +162,7 @@ function App() {
             <Route path="families" element={<ManageFamilies />} />
             <Route path="members" element={<ManageMembers />} />
             <Route path="priests" element={<ManagePriests />} />
+            <Route path="parish-priests" element={<ManageParishPriests />} />
             <Route path="ministries" element={<ManageMinistries />} />
             <Route path="mass-timings" element={<ManageMassTimings />} />
             <Route path="downloads" element={<ManageDownloads />} />

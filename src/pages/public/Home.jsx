@@ -34,6 +34,11 @@ export default function Home() {
   const { documents: families } = useCollection('families');
   const { documents: members } = useCollection('members');
 
+  const { documents: parishPriests, loading: parishPriestsLoading } = useCollection(
+    'parishPriests',
+    { orderBy: 'createdAt', orderDir: 'asc' }
+  );
+
   const familyCount = families.length > 0 ? families.length : 157;
   const memberCount = members.length > 0 ? members.length : 709;
 
@@ -123,52 +128,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Announcements */}
+      {/* Priests from St. Mathew's Church */}
       <section className="container-section pt-8">
         <SectionHeader
-          title="Latest Announcements"
-          subtitle="Stay updated with parish news and notices"
+          title="Priests from St. Mathew's Church"
+          subtitle="Ordained priests from our parish community"
         />
-        {announcementsLoading ? (
+        {parishPriestsLoading ? (
           <LoadingSpinner size="sm" />
-        ) : announcements.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {announcements.map((announcement, i) => (
-              <div key={announcement.id} className="card p-7 group" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-gold-50 to-gold-100 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <FiBell size={16} className="text-gold-600" />
-                  </div>
-                  <span className="text-xs text-gray-400 font-medium">
-                    {new Date(announcement.createdAt).toLocaleDateString('en-IN', {
-                      day: 'numeric',
-                      month: 'short',
-                    })}
-                  </span>
+        ) : parishPriests.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {parishPriests.map((priest) => (
+              <div key={priest.id} className="flex flex-col items-center text-center">
+                <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-gold-400 shadow-lg mb-3">
+                  {priest.photoUrl ? (
+                    <img
+                      src={priest.photoUrl}
+                      alt={priest.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-primary-50 flex items-center justify-center">
+                      <FiUsers size={28} className="text-primary-300" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="font-heading text-lg text-primary-600 mb-3 group-hover:text-gold-600 transition-colors">
-                  {announcement.title}
-                </h3>
-                <p className="text-gray-500 text-sm line-clamp-3 leading-relaxed">
-                  {announcement.description}
-                </p>
+                <h4 className="font-heading text-sm md:text-base text-primary-600 font-bold">
+                  {priest.name}
+                </h4>
+                {priest.ordinationYear && (
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Ordained: {priest.ordinationYear}
+                  </p>
+                )}
+                {priest.congregation && (
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    {priest.congregation}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         ) : (
           <div className="text-center py-12">
             <div className="w-16 h-16 rounded-3xl bg-gray-50 flex items-center justify-center mx-auto mb-4">
-              <FiBell size={24} className="text-gray-300" />
+              <FiUsers size={24} className="text-gray-300" />
             </div>
-            <p className="text-gray-400 text-sm">No announcements at this time.</p>
+            <p className="text-gray-400 text-sm">Priest details will be updated soon.</p>
           </div>
         )}
-        <div className="text-center mt-12">
-          <Link to="/announcements" className="btn-ghost inline-flex items-center">
-            View All Announcements
-            <FiArrowRight className="ml-2" size={14} />
-          </Link>
-        </div>
       </section>
 
       {/* Events */}
