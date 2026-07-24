@@ -244,7 +244,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {[
             { to: '/mass-timings', icon: FiClock, label: 'Mass Timings', color: 'from-blue-500 to-blue-600' },
-            { to: '/announcements', icon: FiBell, label: 'Announcements', color: 'from-amber-500 to-amber-600' },
+            { to: '/login', icon: FiUsers, label: 'Directory', color: 'from-amber-500 to-amber-600' },
             { to: '/events', icon: FiCalendar, label: 'Events', color: 'from-emerald-500 to-emerald-600' },
             { to: '/gallery', icon: FiImage, label: 'Gallery', color: 'from-purple-500 to-purple-600' },
             { to: '/ministries', icon: FiUsers, label: 'Ministries', color: 'from-rose-500 to-rose-600' },
