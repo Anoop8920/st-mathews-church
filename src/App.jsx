@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Layout from './components/layout/Layout';
 import ProtectedRoute from './components/common/ProtectedRoute';
+import ScrollToTop from './components/common/ScrollToTop';
 import { lazy, Suspense } from 'react';
 import LoadingSpinner from './components/common/LoadingSpinner';
 
@@ -40,6 +41,7 @@ import ManageDownloads from './pages/admin/ManageDownloads';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AuthProvider>
         <Routes>
           {/* Public Routes */}
